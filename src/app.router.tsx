@@ -15,12 +15,14 @@ const AppRouter = () => (
             <Card className='router-card'>
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
-                    <Route path="/account/:userAccount" element={<UserDetails />} />
-                    <Route path="/account/:userAccount/repo/:repoName" element={<RepoDetails />} />
+                    <Route path="account/:userAccount">
+                        <Route index element={<UserDetails />} />
+                        <Route path="repo/:repoName" element={<RepoDetails />} />
+                    </Route>
                 </Routes>
             </Card>
         </Suspense>
-    </BrowserRouter>
+    </BrowserRouter >
 );
 
 export default AppRouter;
