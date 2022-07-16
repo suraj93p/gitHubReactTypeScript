@@ -22,6 +22,7 @@ npm - 6.14.4
 1. Go to root and open shell based command line.
 2. Run `npm install`. This will install all the dependencies.
 3. Run `npm start`. This will run the website at localhost.
+4. Note - Since localhost runs in React.StrictMode, the render would run twice. And so, the HTTP APIs would get called twice.
 
 ## Available Scripts
 
